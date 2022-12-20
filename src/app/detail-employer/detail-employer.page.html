@@ -1,0 +1,67 @@
+<ion-header slot="">
+  <ion-toolbar color="primary">
+    <ion-title class="text-center">detail employer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card" *ngIf="employer" style="margin-top:10px;">
+   
+    <div class="card-body">
+  
+            <div class="row">
+                <strong><div class="col-sm-4">ID Admin</div></strong>
+                <div class="col-sm-8">{{ employer.id }}</div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Nom Admin</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.nom }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Prénom</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.prenom }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Numero</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.numero }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Addresse</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.addresse }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Salaire</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.salaire }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Email</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.email }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4"> Mot de passe</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ employer.mdp }}
+                </div>
+            </div>
+            </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-dark d-flex" (click)="backToListe()">
+        <ion-icon name="chevron-back-outline"  style="margin-top:4px;"></ion-icon>
+         retour à la liste
+        </button>
+    </div>
+
+</ion-content>

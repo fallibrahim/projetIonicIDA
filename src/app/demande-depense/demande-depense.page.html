@@ -1,0 +1,45 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-button>
+         <a [routerLink]="['/admin']" class="btn">
+           <ion-icon name="arrow-back-outline"></ion-icon>
+         </a>
+         </ion-button>
+       <ion-title class="text-center">Demande Dépense</ion-title>
+     </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+<ion-list>
+  <ion-item *ngFor="let demandeDepense of demandeDepenses">
+    <ion-label><ion-button class="rounded-circle"
+      [routerLink]="['/edit-demande-depense/',demandeDepense.id]">
+     <ion-icon name="create-outline"></ion-icon>
+   </ion-button></ion-label>
+    <ion-label [routerLink]="['/detait-demande-depense',demandeDepense.id]">
+      <p id="pIdnom">{{ demandeDepense.id }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-demande-depense',demandeDepense.id]">
+      <p id="pIdnom">{{ demandeDepense.idEmployer }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-demande-depense',demandeDepense.id]">
+      <p id="pIdnom">{{ demandeDepense.date }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-demande-depense',demandeDepense.id]">
+      <p id="pIdnom">{{ demandeDepense.valider }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-demande-depense',demandeDepense.id]">
+      <p id="pIdnom">{{ demandeDepense.rejeter }}</p>
+    </ion-label>
+    <ion-label><ion-button color="danger" (click)="deleteDemandeDepense(demandeDepense.id)">
+      <ion-icon name="trash-outline">
+      </ion-icon></ion-button></ion-label>
+  </ion-item>
+</ion-list>
+  <ion-button shape="round" id="idBtnAdd" (click)="AjoutDemandeDepense()"
+ >Ajouter nouveau Demande</ion-button>
+  </ion-content>
+</div>
+

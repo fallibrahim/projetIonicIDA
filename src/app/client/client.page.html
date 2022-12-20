@@ -1,0 +1,36 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-button>
+         <a [routerLink]="['/admin']" class="btn">
+           <ion-icon name="arrow-back-outline"></ion-icon>
+         </a>
+         </ion-button>
+       <ion-title class="text-center">Client</ion-title>
+     </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+<ion-list>
+  <ion-item *ngFor="let client of clients">
+    <ion-label><ion-button class="rounded-circle"
+      [routerLink]="['/edit-client/',client.id]">
+     <ion-icon name="create-outline"></ion-icon>
+   </ion-button></ion-label>
+    <ion-label [routerLink]="['/detail-client',client.id]">
+      <p id="pIdnom">{{ client.nomClient }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-client',client.id]">
+      <p id="pIdnom">{{ client.prenomClient }}</p>
+    </ion-label>
+    <ion-label><ion-button color="danger" (click)="deleteClient(client.id)">
+      <ion-icon name="trash-outline">
+      </ion-icon></ion-button></ion-label>
+  </ion-item>
+</ion-list>
+  <ion-button shape="round" id="idBtnAdd" (click)="AjoutClient()"
+ >Ajouter nouveau Client</ion-button>
+  </ion-content>
+</div>
+

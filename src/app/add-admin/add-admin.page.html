@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Admin </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <p class="text-center mt-5 text-primary">Ajouter un nouveau admin</p>
+  <ion-list lines="full">
+  </ion-list>
+  <form novalidate [formGroup]="adminForm" (ngSubmit)="saveAdmin()">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input formControlName="nom" type="text" 
+      [ngClass]="{'is-invalid' : adminForm.get('nom')!.touched && adminForm.get('nom')!.invalid }"></ion-input>
+      <div class="invalid-feedback">
+        <span *ngIf="adminForm.get('nom')!.errors?.['required']">
+           entrez votre nom.
+        </span>
+        <span *ngIf="adminForm.get('nom')!.errors?.['minlength']">
+           Minimum 4 caractères.
+        </span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Prénom</ion-label>
+      <ion-input formControlName="prenom" type="text"
+      [ngClass]="{'is-invalid' : adminForm.get('prenom')!.touched && adminForm.get('prenom')!.invalid }"></ion-input>
+      <div class="invalid-feedback">
+        <span *ngIf="adminForm.get('prenom')!.errors?.['required']">
+           entrez votre prénom.
+        </span>
+        <span *ngIf="adminForm.get('prenom')!.errors?.['maxlength']">
+           Maximum 20 caractères.
+        </span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"
+      [ngClass]="{'is-invalid' : adminForm.get('email')!.touched && adminForm.get('email')!.invalid }"></ion-input>
+      <div class="invalid-feedback">
+        <span *ngIf="adminForm.get('email')!.errors?.['required']">
+           entrez votre email.
+        </span>
+        <span *ngIf="adminForm.get('email')!.errors?.['email']">
+           Email invalid.
+        </span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input formControlName="mdp" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button [disabled]="adminForm.invalid" shape="round" id="add" type="submit">
+    Enregistrer
+  </ion-button>
+  <ion-button shape="round" id="add"
+   type="submit" (click)="backToAdmin()" class="ms-3">
+    Annuler
+  </ion-button>
+</form>   
+</ion-content>

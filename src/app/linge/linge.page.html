@@ -1,0 +1,103 @@
+<ion-header slot="">
+  <ion-toolbar color="primary">
+    <ion-title class="text-center">detail de type Linge</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card" *ngIf="linge" style="margin-top:10px;">
+   
+    <div class="card-body">
+  
+            <div class="row">
+                <strong><div class="col-sm-4">ID</div></strong>
+                <div class="col-sm-8">{{ linge.id }}</div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">identifiant du type linge</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.idTypeLinge }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">identifiant Employé</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.idEmployer }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4"> identifiant Client</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.idClient }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">identifiant detail type</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.idDetailsType }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Prix linge</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.prixLinge }}
+                </div>
+            </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Payer</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.payer }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Montant avance</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.montantAvance }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">Livrer</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.livrer }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">date dépot</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.dateDepot }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">date retrait</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.dateRetrait }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">date retrait</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.dateRetrait }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">coordX</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.coordX }}
+                </div>
+            </div>
+            <div class="row">
+               <strong><div class="col-sm-4">coordY</div></strong> 
+                <div class="col-sm-8 text-success">
+                    {{ linge.coordY }}
+                </div>
+            </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-dark d-flex" (click)="backToListe()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+         retour à la liste
+        </button>
+    </div>
+
+</ion-content>

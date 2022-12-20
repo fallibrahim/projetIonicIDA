@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Modifier Dépense </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">identifiant Dépense</ion-label>
+      <ion-input [(ngModel)]="idDepense" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+    <ion-button shape="round" id="idBtnAdd" (click)="updateDepense()">
+        <ion-input type="submit"></ion-input>
+         Enregistrer
+      </ion-button>
+</ion-content>

@@ -1,0 +1,33 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-button>
+         <a [routerLink]="['/admin']" class="btn">
+           <ion-icon name="arrow-back-outline"></ion-icon>
+         </a>
+         </ion-button>
+       <ion-title class="text-center">InfoKilo</ion-title>
+     </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+  <ion-content class="ion-padding">
+<ion-list>
+  <ion-item *ngFor="let infoKilo of infoKilos">
+    <ion-label><ion-button class="rounded-circle"
+      [routerLink]="['/edit-info-kilo/', infoKilo.prixKilo]">
+     <ion-icon name="create-outline"></ion-icon>
+   </ion-button></ion-label>
+    <ion-label [routerLink]="['/detail-info-kilo', infoKilo.prixKilo]">
+      <p id="pIdnom">{{ infoKilo.prixKilo }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-info-kilo', infoKilo.prixKilo]">
+      <p id="pIdnom">{{ infoKilo.prixRepassage }}</p>
+    </ion-label>
+    <ion-label><ion-button color="danger" (click)="deleteInfoKilo(infoKilo.prixKilo)">
+      <ion-icon name="trash-outline">
+      </ion-icon></ion-button></ion-label>
+  </ion-item>
+</ion-list>
+

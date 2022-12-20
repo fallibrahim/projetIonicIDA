@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Modifier Client </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">Nom du Client</ion-label>
+      <ion-input [(ngModel)]="nomClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Prénom</ion-label>
+      <ion-input [(ngModel)]="prenomClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Numéro</ion-label>
+      <ion-input [(ngModel)]="numeroClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Addresse</ion-label>
+      <ion-input [(ngModel)]="addresseClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Nombre linge</ion-label>
+      <ion-input [(ngModel)]="nbreLingeClient" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Code Fidelité</ion-label>
+      <ion-input [(ngModel)]="codeFidelite" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+      <ion-button shape="round" id="idBtnAdd" (click)="updateClient()">
+        <ion-input type="submit"></ion-input>
+         Enregistrer
+      </ion-button>
+</ion-content>

@@ -1,0 +1,37 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+        <ion-buttons>
+           <ion-button>
+            <a [routerLink]="['/admin']" class="btn">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </a>
+            </ion-button>
+          <ion-title class="text-center">Dépense</ion-title>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+<ion-list>
+  <ion-item *ngFor="let depense of depenses">
+    <ion-label><ion-button class="rounded-circle"
+      [routerLink]="['/edit-depense/',depense.id]">
+     <ion-icon name="create-outline"></ion-icon>
+   </ion-button></ion-label>
+    <ion-label [routerLink]="['/detait-depense',depense.id]">
+      <p id="pIdnom">{{ depense.id }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-depense',depense.id]">
+      <p id="pIdnom">{{ depense.idDepense }}</p>
+    </ion-label>
+ 
+    <ion-label><ion-button color="danger" (click)="deleteDepense(depense.id)">
+      <ion-icon name="trash-outline">
+      </ion-icon></ion-button></ion-label>
+  </ion-item>
+</ion-list>
+  <ion-button shape="round" id="idBtnAdd" (click)="AjoutDepense()"
+ >Ajouter nouveau Depense</ion-button>
+  </ion-content>
+</div>
+

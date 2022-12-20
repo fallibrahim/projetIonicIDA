@@ -1,0 +1,49 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>etat-financier</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>InfoKilo</ion-item>
+      <ion-item>InfosPiece</ion-item>
+      <ion-item>Linge</ion-item>
+      <ion-item [routerLink]="['/client']">Client</ion-item>
+      <ion-item [routerLink]="['/employer']">Employer</ion-item>
+      <ion-item [routerLink]="['/admin']">Admin</ion-item>
+      <ion-item [routerLink]="['/demande-depense']">Demande Dépense</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+<ion-list>
+  <ion-item *ngFor="let etatFinancier of etatFinanciers">
+    <ion-label>
+      <p id="pIdnom">{{ etatFinancier.caisse }}</p>
+    </ion-label>
+    <ion-label>
+      <p id="pIdnom">{{ etatFinancier.depense }}</p>
+    </ion-label>
+    <ion-label>
+      <p id="pIdnom">{{ etatFinancier.lastDateCaisse }}</p>
+    </ion-label>
+    <ion-label>
+      <p id="pIdnom">{{ etatFinancier.lastDateDepense }}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+  <ion-button shape="round" id="idBtnAdd"
+ >Ajouter nouveau Client</ion-button>
+  </ion-content>
+</div>
+

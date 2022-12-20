@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ajouter nouveau Linge </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">Nom</ion-label>
+      <ion-input [(ngModel)]="nom" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+      <ion-button shape="round" id="idBtnAdd" (click)="createLinge()">
+        <ion-input type="submit"></ion-input>
+         Enregistrer
+      </ion-button>
+</ion-content>

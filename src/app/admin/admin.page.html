@@ -1,0 +1,51 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu admin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item [routerLink]="['/admin']">ADMINS</ion-item>
+      <ion-item [routerLink]="['/employer']">EMPLOYES</ion-item>
+      <ion-item [routerLink]="['/depense']">DEPENSES</ion-item>
+      <ion-item [routerLink]="['/facture']">FACTURES</ion-item>
+      <ion-item [routerLink]="['/client']">CLIENTS</ion-item>
+      <ion-item [routerLink]="['/etat-financier']">ETAT-FINANCIER</ion-item>
+      <ion-item [routerLink]="['/demande-depense']">DEMANDE DEPENSE</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Admin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <p class="text-center text-primary">liste des employés</p>
+<ion-list>
+  <ion-item *ngFor="let admin of admins">
+    <ion-label><ion-button class="rounded-circle"
+      [routerLink]="['/edit-admin/',admin.id]">
+     <ion-icon name="create-outline"></ion-icon>
+   </ion-button></ion-label>
+    <ion-label [routerLink]="['/detail-admin',admin.id]">
+      <p id="pIdnom">{{ admin.nom }}</p>
+    </ion-label>
+    <ion-label [routerLink]="['/detail-admin',admin.id]">
+      <p id="pIdnom">{{ admin.prenom }}</p>
+    </ion-label>
+    <ion-label><ion-button color="danger" (click)="deleteAdmin(admin.id)">
+      <ion-icon name="trash-outline">
+      </ion-icon></ion-button></ion-label>
+  </ion-item>
+</ion-list>
+  <ion-button shape="round" id="idBtnAdd" (click)="AjoutAdmin()" id="list"
+ >Ajouter nouveau Admin</ion-button>
+  </ion-content>
+</div>
+

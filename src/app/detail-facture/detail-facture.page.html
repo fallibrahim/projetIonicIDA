@@ -1,0 +1,31 @@
+<ion-header slot="">
+  <ion-toolbar color="primary">
+    <ion-title class="text-center">detail facture </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="card" *ngIf="factures" style="margin-top:10px;">
+   
+    <div class="card-body">
+                    <div class="row">
+                        <strong><div class="col-sm">ID</div></strong>
+                        <div class="col-sm text-success">{{ factures.id }}</div>
+                    </div>
+                 <div class="row">
+                   <strong><div class="col">Type facture</div></strong>
+                   <div class="col text-success">{{ factures.type }}</div>
+               </div>
+                 <div class="row">
+                   <strong><div class="col">Montant facture</div></strong>
+                   <div class="col text-success">{{ factures.montant }}</div>
+               </div>
+            </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-dark d-flex" (click)="backToListe()">
+        <ion-icon name="chevron-back-outline"  style="margin-top:4px;"></ion-icon>
+         retour à la liste
+        </button>
+    </div>
+
+</ion-content>

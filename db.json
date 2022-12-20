@@ -1,0 +1,172 @@
+{
+  "infosKilo": [
+    {
+      "prixKilo": 2000,
+      "prixRepassage": 3000
+    }
+  ],
+  "DetailsTypeKilo": [
+    {
+      "id": 1,
+      "type": "paiement",
+      "montant": 2000
+    }
+  ],
+  "DetailsPiece": [
+    {
+      "idPiece": 1,
+      "nbrPiece": 2,
+      "prixLinge": 1000,
+      "prixRepassage": 3500,
+      "idDetailsTypePiece": 1,
+      "aRepasser": false
+    }
+  ],
+  "InfosPiece": [
+    {
+      "id": 1,
+      "nom": 2,
+      "prixLinge": 1000,
+      "prixRepassage": 3500
+    }
+  ],
+  "TypeLinge": [
+    {
+      "id": 1,
+      "nom": "veste noir"
+    },
+    {
+      "id": 2,
+      "nom": "chemise"
+    },
+    {
+      "id": 3,
+      "nom": "pantalon"
+    },
+    {
+      "nom": "chemise blanc",
+      "id": 4
+    },
+    {
+      "nom": "chemise bleu",
+      "id": 5
+    },
+    {
+      "nom": "nappe",
+      "id": 7
+    }
+  ],
+  "Linge": [
+    {
+      "id": 1,
+      "idTypeLinge": 3,
+      "idEmployer": 5,
+      "idClient": 7,
+      "idDetailsType": 9,
+      "prixLinge": 2000,
+      "payer": false,
+      "montantAvance": 0,
+      "livrer": false,
+      "dateDepot": "25-09-2022",
+      "dateRetrait": "01-10-2022",
+      "coordX": 2,
+      "coordY": 4
+    }
+  ],
+  "Client": [
+    {
+      "idEmployer": "n9043784323",
+      "nomClient": "diagne",
+      "prenomClient": "moussa",
+      "numeroClient": 233,
+      "addresseClient": "parcelles assainies",
+      "nbreLingeClient": 33,
+      "codeFidelite": 14,
+      "id": 1
+    }
+  ],
+  "Employer": [
+    {
+      "id": 1,
+      "nom": "mbaye",
+      "prenom": "etienne Clement",
+      "numero": 5,
+      "addresse": "Keur Massar",
+      "salaire": 100000,
+      "email": "etieneClement@gmail",
+      "mdp": "etiene2201@"
+    }
+  ],
+  "CompteBloque": [
+    {
+      "id": 1,
+      "idEmployer": "n9043784323",
+      "email": "El@gmail.com",
+      "byAdmin": true,
+      "dateTime": "12-08-2022-st15:09"
+    }
+  ],
+  "DemandeDepense": [
+    {
+      "idEmployer": "9043784323",
+      "date": "2022-11-17",
+      "valider": "true",
+      "rejeter": "false",
+      "idAdmin": 5,
+      "descriptionDemandeDepense": "eau de javel",
+      "montant": 100000,
+      "id": 1
+    }
+  ],
+  "Admin": [
+    {
+      "nom": "ngom",
+      "prenom": "modou",
+      "email": "modou@gmail.com",
+      "mdp": "dfgbgbbg",
+      "id": 2
+    },
+    {
+      "nom": "moussa",
+      "prenom": "diop",
+      "email": "moussadiop@gmail.com",
+      "mdp": "moussa12@",
+      "id": 3
+    },
+    {
+      "nom": "faye",
+      "prenom": "ndiaga",
+      "email": "ndfaye@gamil.com",
+      "mdp": "ndf1234#",
+      "id": 4
+    },
+    {
+      "nom": "fall",
+      "prenom": "ibrahima",
+      "email": "inrrr@gmail.com",
+      "mdp": "zded",
+      "id": 5
+    }
+  ],
+  "Depense": [
+    {
+      "idDepense": "idep123",
+      "id": 1
+    }
+  ],
+  "Facture": [
+    {
+      "type": "paiement ",
+      "montant": 2000,
+      "id": 1
+    }
+  ],
+  "EtatFinancier": [
+    {
+      "caisse": 3,
+      "depense": 500000,
+      "lastDateCaisse": "01-08-2022",
+      "lastDateDepense": "15-07-2022"
+    }
+  ]
+}

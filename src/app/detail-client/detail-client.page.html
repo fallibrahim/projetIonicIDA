@@ -1,0 +1,65 @@
+<ion-header slot="">
+  <ion-toolbar color="primary">
+    <ion-title class="text-center">detail du client</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="card" *ngIf="client" style="margin-top:10px;">
+   
+    <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <strong><div class="col-sm">ID Client</div></strong>
+                        <div class="col-sm text-success">{{ client.id }}</div>
+                    </div>
+                </div>
+                  <div class="row">
+                   <strong><div class="col">ID Employer</div></strong>
+                   <div class="col text-success">{{ client.idEmployer }}</div>
+               </div>
+                 <div class="row">
+                    <strong><div class="col">Nom Client</div></strong> 
+                     <div class="col text-success">
+                         {{  client.nomClient }}
+                     </div>
+                 </div>
+                 <div class="row">
+                    <strong><div class="col">Prénom</div></strong> 
+                     <div class="col text-success">
+                         {{  client.prenomClient }}
+                     </div>
+                 </div>
+                 <div class="row">
+                    <strong><div class="col">Numero</div></strong> 
+                     <div class="col text-success">
+                         {{  client.numeroClient }}
+                     </div>
+                 </div>
+                 <div class="row">
+                    <strong><div class="col">Addresse</div></strong> 
+                     <div class="col text-success">
+                         {{  client.addresseClient }}
+                     </div>
+                 </div>
+                 <div class="row">
+                    <strong><div class="col">Nombre linge</div></strong> 
+                     <div class="col text-success">
+                         {{  client.nbreLingeClient }}
+                     </div>
+                 </div>
+                 <div class="row">
+                    <strong><div class="col">Code de Fidelité</div></strong> 
+                     <div class="col text-success">
+                         {{  client.email }}
+                     </div>
+                 </div>
+                </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-dark d-flex" (click)="backToListe()">
+        <ion-icon name="chevron-back-outline"  style="margin-top:4px;"></ion-icon>
+         retour à la liste
+        </button>
+    </div>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ajouter nouveau Employer </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">Nom</ion-label>
+      <ion-input [(ngModel)]="nom" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Prénom</ion-label>
+      <ion-input [(ngModel)]="prenom" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Numéro</ion-label>
+      <ion-input [(ngModel)]="numero" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Addresse</ion-label>
+      <ion-input [(ngModel)]="addresse" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Salaire</ion-label>
+      <ion-input [(ngModel)]="salaire" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Mot de passe</ion-label>
+      <ion-input [(ngModel)]="mdp" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+      <ion-button shape="round" id="idBtnAdd" (click)="updateEmployer()">
+        <ion-input type="submit"></ion-input>
+         Enregistrer
+      </ion-button>
+</ion-content>

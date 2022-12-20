@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ajouter nouveau Facture </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">identifiant facture</ion-label>
+      <ion-input [(ngModel)]="id" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">type</ion-label>
+      <ion-input [(ngModel)]="type" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Montant</ion-label>
+      <ion-input [(ngModel)]="montant" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+    <ion-button shape="round" id="idBtnAdd" (click)="createFacture()">
+        <ion-input type="submit"></ion-input>
+         Enregistrer
+      </ion-button>
+</ion-content>

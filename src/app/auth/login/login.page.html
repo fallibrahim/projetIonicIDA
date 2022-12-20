@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="form-container">
+  <p class="text-center mt-5 text-primary" id="titre">Page d'authentification</p>
+ <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+  <ion-list>
+      <ion-item>
+        <ion-label  position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email" name="email"></ion-input>
+      </ion-item>
+      <div *ngIf="shouldShowEmailRequiredError()" class="text-danger">email est obligatoire.</div>
+      <ion-item>
+        <ion-label  position="floating">password</ion-label>
+        <ion-input formControlName="mdp" type="password" name="mdp"></ion-input>
+      </ion-item>
+      <div *ngIf="shouldShowMdpRequiredError()" class="text-danger">mot de passe obligatoire.</div>
+      <a href="" id="forgetMdp">mot de passe oublié?</a>
+  </ion-list>
+    <ion-button [disabled]="!loginForm.valid" id="conn" shape="round" 
+    type="submit">
+      Se connecter
+    </ion-button>
+  </form>  
+</ion-content>
+
+

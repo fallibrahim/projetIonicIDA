@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>edit infoKilo </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">Prix kilo</ion-label>
+      <ion-input [(ngModel)]="prixKilo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Prix Repassage</ion-label>
+      <ion-input [(ngModel)]="prixRepassage" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+      <ion-button shape="round" id="idBtnAdd" (click)="updateInfoKilo()">
+        <ion-input type="submit"></ion-input>
+         modifier
+      </ion-button>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Modifier nouveau Demande </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" padding>
+  <ion-list lines="full">
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">identifiant employer</ion-label>
+      <ion-input [(ngModel)]="idEmployer" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Date</ion-label>
+      <ion-input [(ngModel)]="date" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Valider</ion-label>
+      <ion-select [(ngModel)]="valider">
+        <ion-select-option value="true">Oui</ion-select-option>
+        <ion-select-option value="false">Non</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Rejeter</ion-label>
+      <ion-select [(ngModel)]="rejeter">
+        <ion-select-option value="true">Oui</ion-select-option>
+        <ion-select-option value="false">Non</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">identifiant admin</ion-label>
+      <ion-input [(ngModel)]="idAdmin" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">description du demande</ion-label>
+      <ion-input [(ngModel)]="descriptionDemandeDepense" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Montant</ion-label>
+      <ion-input [(ngModel)]="montant" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+    <ion-button shape="round" id="idBtnAdd" (click)="updateDemandeDepense()">
+        <ion-input type="submit"></ion-input>
+         Enregistrer
+      </ion-button>
+</ion-content>
